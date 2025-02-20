@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-20 11:07-0500\n"
+"POT-Creation-Date: 2025-02-20 12:59-0500\n"
 "PO-Revision-Date: 2025-02-20 11:09-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -22,40 +22,80 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:15 templates/base.html:30
+#: templates/base.html:15 templates/base.html:31
 msgid "Services"
 msgstr ""
 
-#: templates/base.html:16 templates/base.html:36
+#: templates/base.html:16 templates/base.html:37
 msgid "Contact"
 msgstr ""
 
-#: templates/base.html:26
+#: templates/base.html:27
 msgid "Luxury Cars"
 msgstr ""
 
-#: templates/base.html:27
+#: templates/base.html:28
 msgid "Premium luxury car rental in Campania, Italy"
 msgstr ""
 
-#: templates/base.html:31
+#: templates/base.html:32 templates/service.html:7
 msgid "Rolls-Royce Ghost 6.6"
 msgstr ""
 
-#: templates/base.html:32
+#: templates/base.html:33 templates/service.html:11
 msgid "Weddings"
 msgstr ""
 
-#: templates/base.html:33
+#: templates/base.html:34 templates/service.html:15
 msgid "Private Parties"
 msgstr ""
 
-#: templates/index.html:4
-msgid "Luxury Car Rentals"
+#: templates/book.html:4
+msgid "Book Your Luxury Ride"
+msgstr ""
+
+#: templates/book.html:6
+msgid "Fill out the form below to book a luxury car."
+msgstr ""
+
+#: templates/book.html:8 templates/contact.html:4
+msgid "Contact Us"
+msgstr ""
+
+#: templates/contact.html:6
+msgid "Get in touch for luxury car rentals in Campania, Italy."
+msgstr ""
+
+#: templates/contact.html:7
+msgid "Email"
+msgstr ""
+
+#: templates/contact.html:8
+msgid "Tel"
 msgstr ""
 
 #: templates/index.html:5
-msgid "Experience luxury in Campania, Italy"
+msgid "Luxury Car Rentals"
+msgstr ""
+
+#: templates/index.html:6
+msgid "Experience premium luxury in Campania, Italy"
+msgstr ""
+
+#: templates/service.html:4
+msgid "Our Services"
+msgstr ""
+
+#: templates/service.html:8
+msgid "Premium luxury driving experience with driver."
+msgstr ""
+
+#: templates/service.html:12
+msgid "Elegant transportation for your special day."
+msgstr ""
+
+#: templates/service.html:16
+msgid "Luxury rides for unforgettable events."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/click/_termui_impl.py:556
@@ -82,14 +122,14 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/core.py:1424
+#: venv/lib/python3.11/site-packages/click/core.py:1422
 #, python-brace-format
 msgid "Got unexpected extra argument ({args})"
 msgid_plural "Got unexpected extra arguments ({args})"
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.11/site-packages/click/core.py:1437
+#: venv/lib/python3.11/site-packages/click/core.py:1438
 #, python-brace-format
 msgid "DeprecationWarning: The command {name!r} is deprecated."
 msgstr ""
@@ -111,7 +151,7 @@ msgstr ""
 msgid "Value must be an iterable."
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/core.py:2336
+#: venv/lib/python3.11/site-packages/click/core.py:2334
 #, python-brace-format
 msgid "Takes {nargs} values but 1 was given."
 msgid_plural "Takes {nargs} values but {len} were given."
@@ -197,7 +237,7 @@ msgstr ""
 msgid "No such option: {name}"
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/exceptions.py:234
+#: venv/lib/python3.11/site-packages/click/exceptions.py:232
 #, python-brace-format
 msgid "Did you mean {possibility}?"
 msgid_plural "(Possible options: {possibilities})"
@@ -223,14 +263,14 @@ msgstr ""
 msgid "Option {name!r} does not take a value."
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/parser.py:475
+#: venv/lib/python3.11/site-packages/click/parser.py:476
 #, python-brace-format
 msgid "Option {name!r} requires an argument."
 msgid_plural "Option {name!r} requires {nargs} arguments."
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.11/site-packages/click/shell_completion.py:325
+#: venv/lib/python3.11/site-packages/click/shell_completion.py:326
 msgid "Shell completion is not supported for Bash versions older than 4.4."
 msgstr ""
 
@@ -270,14 +310,14 @@ msgid ""
 "\t{choices}"
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/types.py:301
+#: venv/lib/python3.11/site-packages/click/types.py:299
 #, python-brace-format
 msgid "{value!r} is not {choice}."
 msgid_plural "{value!r} is not one of {choices}."
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.11/site-packages/click/types.py:395
+#: venv/lib/python3.11/site-packages/click/types.py:393
 #, python-brace-format
 msgid "{value!r} does not match the format {format}."
 msgid_plural "{value!r} does not match the formats {formats}."
@@ -346,10 +386,13 @@ msgstr ""
 msgid "{name} {filename!r} is not executable."
 msgstr ""
 
-#: venv/lib/python3.11/site-packages/click/types.py:991
+#: venv/lib/python3.11/site-packages/click/types.py:992
 #, python-brace-format
 msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
 msgstr[0] ""
 msgstr[1] ""
+
+#~ msgid "Experience luxury in Campania, Italy"
+#~ msgstr ""
 
