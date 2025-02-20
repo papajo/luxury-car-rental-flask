@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory 
+import os
 from flask_babel import Babel, _
 
 app = Flask(__name__)
@@ -7,6 +8,16 @@ def get_locale():
     return request.accept_languages.best_match(['en', 'it']) or 'en'
 
 babel = Babel(app, locale_selector=get_locale)
+
+@app.route('/') 
+def home(): return render_template('index.html')
+
+@app.route('/static/') 
+def serve_static(filename): 
+    root_dir = os.path.dirname(os.getcwd()) 
+    return send_from_directory(os.path.join(root_dir, 'static'), filename)
+
+def create_app(): return app 
 
 @app.route('/')
 @app.route('/<lang>/')
