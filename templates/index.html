@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<main class="container mx-auto py-16">
-    <section class="text-center">
+<main class="container mx-auto">
+    <section class="text-center py-12 bg-gray-100">
         <h1 class="text-5xl font-bold text-gray-800 mb-4">{{ _('Luxury Car Rentals') }}</h1>
         <p class="text-xl text-gray-600 mb-8">{{ _('Experience premium luxury in Campania, Italy') }}</p>
+        <img src="{{ url_for('static', filename='images/rolls-royce-6.jpg') }}" alt="Rolls-Royce Ghost 6.6" class="mx-auto mb-8 w-full max-w-2xl md:max-w-3xl rounded-lg shadow-md">
         <a href="/{{ lang }}/book" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-indigo-700">Book Now</a>
     </section>
-    <!-- Add images or additional content here from static/images/ -->
+    <!-- Add more content or images as needed -->
 </main>
 {% endblock %}
