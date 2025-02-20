@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="container mx-auto py-16">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">{{ _('Our Services') }}</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce Ghost 6.6') }}</h2>
+            <p class="text-gray-600 mt-2">{{ _('Premium luxury driving experience with driver.') }}</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Weddings') }}</h2>
+            <p class="text-gray-600 mt-2">{{ _('Elegant transportation for your special day.') }}</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Private Parties') }}</h2>
+            <p class="text-gray-600 mt-2">{{ _('Luxury rides for unforgettable events.') }}</p>
+        </div>
+    </div>
+</main>
+{% endblock %}
