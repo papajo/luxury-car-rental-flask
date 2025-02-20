@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cars - {{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">Luxury Cars</div>
+        <nav class="space-x-4">
+            <a href="/{{ lang }}/" class="hover:text-gray-300">{{ _('Home') }}</a>
+            <a href="/{{ lang }}/services" class="hover:text-gray-300">{{ _('Services') }}</a>
+            <a href="/{{ lang }}/contact" class="hover:text-gray-300">{{ _('Contact') }}</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <a href="/en/" class="hover:text-gray-300">EN</a> | <a href="/it/" class="hover:text-gray-300">IT</a>
+            <a href="/{{ lang }}/book" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Book Now</a>
+        </div>
+    </header>
+    {% block content %}{% endblock %}
+    <footer class="bg-gray-800 text-white p-6 mt-8">
+        <div class="flex justify-between">
+            <div>
+                <h3>{{ _('Luxury Cars') }}</h3>
+                <p>{{ _('Premium luxury car rental in Campania, Italy') }}</p>
+            </div>
+            <div>
+                <h3>{{ _('Services') }}</h3>
+                <p>{{ _('Rolls-Royce Ghost 6.6') }}</p>
+                <p>{{ _('Weddings') }}</p>
+                <p>{{ _('Private Parties') }}</p>
+            </div>
+            <div>
+                <h3>{{ _('Contact') }}</h3>
+                <p>Email: info@luxurycars.com</p>
+                <p>Tel: +39 123 456 789</p>
+            </div>
+        </div>
+        <p class="text-center mt-4 text-gray-400">© 2025 Luxury Cars</p>
+    </footer>
+</body>
+</html>
