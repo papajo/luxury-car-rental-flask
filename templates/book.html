@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="container mx-auto py-16">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">{{ _('Book Your Luxury Ride') }}</h1>
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <p class="text-gray-600 mb-4">{{ _('Fill out the form below to book a luxury car.') }}</p>
+        <!-- Add a simple form here (optional for now) -->
+        <a href="/{{ lang }}/contact" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Contact Us') }}</a>
+    </div>
+</main>
+{% endblock %}
