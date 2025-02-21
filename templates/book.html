@@ -5,7 +5,26 @@
     <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
         <p class="text-gray-600 mb-4">{{ _('Fill out the form below to book a luxury car.') }}</p>
         <!-- Add a simple form here (optional for now) -->
-        <a href="/{{ lang }}/contact" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Contact Us') }}</a>
+        <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+            <form action="/{{ lang }}/book" method="post">
+                <label for="service" class="block text-gray-700">{{ _('Service') }}</label>
+                <select id="service" name="service" class="w-full p-2 mb-4 border rounded">
+                    <option value="rolls-royce">{{ _('Rolls-Royce Phantom') }}</option>
+                    <option value="wedding">{{ _('Wedding Car') }}</option>
+                    <option value="party">{{ _('Private Party Car') }}</option>
+                </select>
+                <label for="location" class="block text-gray-700">{{ _('Location') }}</label>
+                <select id="location" name="location" class="w-full p-2 mb-4 border rounded">
+                    <option value="naples">{{ _('Naples') }}</option>
+                    <option value="salerno">{{ _('Salerno') }}</option>
+                    <!-- Add more locations -->
+                </select>
+                <label for="date" class="block text-gray-700">{{ _('Date') }}</label>
+                <input type="date" id="date" name="date" class="w-full p-2 mb-4 border rounded">
+                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Book Now') }}</button>
+            </form>
+        </div>
+        <a href="/{{ lang }}/contact" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Contact Us') }}</a>
     </div>
 </main>
 {% endblock %}

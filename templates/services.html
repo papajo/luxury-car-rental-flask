@@ -16,6 +16,14 @@
             <p class="text-gray-600 mt-2">{{ _('Luxury rides for unforgettable events.') }}</p>
         </div>
     </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce in Naples') }}</h2>
+            <p class="text-gray-600 mt-2">{{ _('Luxury driving in Naples, Campania.') }}</p>
+            <a href="/{{ lang }}/book" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Book Now</a>
+        </div>
+        <!-- Add more locations (Avellino, Benevento, etc.) -->
+    </div>
     <img src="{{ url_for('static', filename='images/rolls-royce-6.jpg') }}" alt="Rolls-Royce Ghost 6.6" class="mx-auto mb-4 rounded-lg">
 </main>
 {% endblock %}

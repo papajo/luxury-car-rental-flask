@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Cars - {{ title }}</title>
+    <meta name="description" content="{{ _('Premium luxury car rentals in Campania, Italy') }}">
+    <meta name="keywords" content="{{ _('luxury car rental, rolls-royce, campania, italy, wedding car, private party') }}">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body class="bg-gray-100 font-sans">
-    <header class="bg-gray-900 text-white p-4 flex justify-between items-center">
+    <header class="bg-gray-900 text-white p-3 flex justify-between items-center">
         <div class="text-2xl font-bold">Luxury Cars</div>
         <nav class="space-x-4">
             <a href="/{{ lang }}/" class="hover:text-gray-300">{{ _('Home') }}</a>
