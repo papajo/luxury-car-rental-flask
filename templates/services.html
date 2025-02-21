@@ -3,27 +3,47 @@
 <main class="container mx-auto py-16">
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">{{ _('Our Services') }}</h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce Ghost 6.6') }}</h2>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce Phantom') }}</h2>
             <p class="text-gray-600 mt-2">{{ _('Premium luxury driving experience with driver.') }}</p>
+            <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-800">{{ _('Weddings') }}</h2>
             <p class="text-gray-600 mt-2">{{ _('Elegant transportation for your special day.') }}</p>
+            <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-800">{{ _('Private Parties') }}</h2>
             <p class="text-gray-600 mt-2">{{ _('Luxury rides for unforgettable events.') }}</p>
+            <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-md">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce in Naples') }}</h2>
             <p class="text-gray-600 mt-2">{{ _('Luxury driving in Naples, Campania.') }}</p>
-            <a href="/{{ lang }}/book" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Book Now</a>
+            <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce in Salerno') }}</h2>
+            <p class="text-gray-600 mt-2">{{ _('Luxury driving in Salerno, Campania.') }}</p>
+            <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
         </div>
         <!-- Add more locations (Avellino, Benevento, etc.) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce in Avellino') }}</h2>
+                <p class="text-gray-600 mt-2">{{ _('Luxury driving in Avellino, Campania.') }}</p>
+                <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-semibold text-gray-800">{{ _('Rolls-Royce in Benevento') }}</h2>
+                <p class="text-gray-600 mt-2">{{ _('Luxury driving in Benevento, Campania.') }}</p>
+                <a href="/{{ lang }}/book" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
+            </div>
+            <!-- Add more (Montoro, Montesarchio, San Giorgio del Sannio, Caserta, Aversa, Marcianise, Cava de' Tirreni, Battipaglia, Giugliano in Campania, Torre del Greco) -->
+        </div>
     </div>
-    <img src="{{ url_for('static', filename='images/rolls-royce-6.jpg') }}" alt="Rolls-Royce Ghost 6.6" class="mx-auto mb-4 rounded-lg">
 </main>
 {% endblock %}

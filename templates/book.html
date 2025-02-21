@@ -2,29 +2,29 @@
 {% block content %}
 <main class="container mx-auto py-16">
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">{{ _('Book Your Luxury Ride') }}</h1>
-    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
         <p class="text-gray-600 mb-4">{{ _('Fill out the form below to book a luxury car.') }}</p>
-        <!-- Add a simple form here (optional for now) -->
-        <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
-            <form action="/{{ lang }}/book" method="post">
-                <label for="service" class="block text-gray-700">{{ _('Service') }}</label>
-                <select id="service" name="service" class="w-full p-2 mb-4 border rounded">
-                    <option value="rolls-royce">{{ _('Rolls-Royce Phantom') }}</option>
-                    <option value="wedding">{{ _('Wedding Car') }}</option>
-                    <option value="party">{{ _('Private Party Car') }}</option>
-                </select>
-                <label for="location" class="block text-gray-700">{{ _('Location') }}</label>
-                <select id="location" name="location" class="w-full p-2 mb-4 border rounded">
-                    <option value="naples">{{ _('Naples') }}</option>
-                    <option value="salerno">{{ _('Salerno') }}</option>
-                    <!-- Add more locations -->
-                </select>
-                <label for="date" class="block text-gray-700">{{ _('Date') }}</label>
-                <input type="date" id="date" name="date" class="w-full p-2 mb-4 border rounded">
-                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Book Now') }}</button>
-            </form>
-        </div>
-        <a href="/{{ lang }}/contact" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Contact Us') }}</a>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="mt-4 p-4 bg-{{ 'green' if category == 'success' else 'red' }}-100 text-{{ 'green' if category == 'success' else 'red' }}-800 rounded">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/{{ lang }}/book" method="post">
+            {{ form.hidden_tag() }}
+            <label for="service" class="block text-gray-700 mt-4">{{ form.service.label }}</label>
+            {{ form.service(class="w-full p-2 mb-4 border rounded") }}
+            <label for="location" class="block text-gray-700">{{ form.location.label }}</label>
+            {{ form.location(class="w-full p-2 mb-4 border rounded") }}
+            <label for="date" class="block text-gray-700">{{ form.date.label }}</label>
+            {{ form.date(class="w-full p-2 mb-4 border rounded") }}
+            <label for="email" class="block text-gray-700">{{ form.email.label }}</label>
+            {{ form.email(class="w-full p-2 mb-4 border rounded", placeholder=_('Your email')) }}
+            {{ form.submit(class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700") }}
+        </form>
     </div>
 </main>
 {% endblock %}

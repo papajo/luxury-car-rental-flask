@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Cars - {{ title }}</title>
-    <meta name="description" content="{{ _('Premium luxury car rentals in Campania, Italy') }}">
-    <meta name="keywords" content="{{ _('luxury car rental, rolls-royce, campania, italy, wedding car, private party') }}">
+    <title>Luxury Cars - {{ title|default(_('Luxury Cars')) }}</title>
+    <meta name="description" content="{{ _('Premium luxury car rentals in Campania, Italy for ' + title|default('home')) }}">
+    <meta name="keywords" content="{{ _('luxury car rental, rolls-royce phantom, campania, italy, wedding car, private party, ' + location|default('')|replace(' ', '-')) }}">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 font-sans">
@@ -18,7 +18,7 @@
         </nav>
         <div class="flex items-center space-x-4">
             <a href="/en/" class="hover:text-gray-300">EN</a> | <a href="/it/" class="hover:text-gray-300">IT</a>
-            <a href="/{{ lang }}/book" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Book Now</a>
+            <a href="/{{ lang }}/book" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Book Now</a>
         </div>
     </header>
     {% block content %}{% endblock %}
@@ -30,7 +30,7 @@
             </div>
             <div>
                 <h3>{{ _('Services') }}</h3>
-                <p>{{ _('Rolls-Royce Ghost 6.6') }}</p>
+                <p>{{ _('Rolls-Royce Phantom') }}</p>
                 <p>{{ _('Weddings') }}</p>
                 <p>{{ _('Private Parties') }}</p>
             </div>
@@ -40,7 +40,7 @@
                 <p>Tel: +39 123 456 789</p>
             </div>
         </div>
-        <p class="text-center mt-4 text-gray-400">© 2025 Luxury Cars</p>
+        <p class="text-center mt-4 text-gray-400">© 2025 Luxury Cars. All rights reserved.</p>
     </footer>
 </body>
 </html>

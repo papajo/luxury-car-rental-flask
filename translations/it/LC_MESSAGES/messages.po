@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-20 12:59-0500\n"
+"POT-Creation-Date: 2025-02-21 12:18-0500\n"
 "PO-Revision-Date: 2025-02-20 11:09-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -18,35 +18,141 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/base.html:14
-msgid "Home"
-msgstr "asa"
+#: app.py:21
+msgid "Name"
+msgstr ""
 
-#: templates/base.html:15 templates/base.html:31
-msgid "Services"
+#: app.py:22 app.py:49
+msgid "Email"
+msgstr "Email"
+
+#: app.py:23
+msgid "Message"
+msgstr ""
+
+#: app.py:24
+msgid "Send"
+msgstr ""
+
+#: app.py:27
+#, fuzzy
+msgid "Service"
 msgstr "Servizi"
 
-#: templates/base.html:16 templates/base.html:37
-msgid "Contact"
-msgstr "Contatto"
+#: app.py:28 templates/base.html:33 templates/index.html:16
+#: templates/services.html:7
+msgid "Rolls-Royce Phantom"
+msgstr ""
 
-#: templates/base.html:27
+#: app.py:29
+msgid "Wedding Car"
+msgstr ""
+
+#: app.py:30
+msgid "Private Party Car"
+msgstr ""
+
+#: app.py:32
+msgid "Location"
+msgstr ""
+
+#: app.py:33
+msgid "Naples"
+msgstr ""
+
+#: app.py:34
+msgid "Salerno"
+msgstr ""
+
+#: app.py:35
+msgid "Avellino"
+msgstr ""
+
+#: app.py:36
+msgid "Benevento"
+msgstr ""
+
+#: app.py:37
+msgid "Montoro"
+msgstr ""
+
+#: app.py:38
+msgid "Montesarchio"
+msgstr ""
+
+#: app.py:39
+msgid "San Giorgio del Sannio"
+msgstr ""
+
+#: app.py:40
+msgid "Caserta"
+msgstr ""
+
+#: app.py:41
+msgid "Aversa"
+msgstr ""
+
+#: app.py:42
+msgid "Marcianise"
+msgstr ""
+
+#: app.py:43
+msgid "Cava de’ Tirreni"
+msgstr ""
+
+#: app.py:44
+msgid "Battipaglia"
+msgstr ""
+
+#: app.py:45
+msgid "Giugliano in Campania"
+msgstr ""
+
+#: app.py:46
+msgid "Torre del Greco"
+msgstr ""
+
+#: app.py:48
+msgid "Date"
+msgstr ""
+
+#: app.py:50
+msgid "Book Now"
+msgstr ""
+
+#: app.py:74
+msgid "Your message has been sent!"
+msgstr ""
+
+#: app.py:84
+msgid "Your booking has been submitted!"
+msgstr ""
+
+#: templates/base.html:6 templates/base.html:28
 msgid "Luxury Cars"
 msgstr "Auto di Lusso"
 
-#: templates/base.html:28
+#: templates/base.html:15
+msgid "Home"
+msgstr "Casa"
+
+#: templates/base.html:16 templates/base.html:32
+msgid "Services"
+msgstr "Servizi"
+
+#: templates/base.html:17 templates/base.html:38
+msgid "Contact"
+msgstr "Contatto"
+
+#: templates/base.html:29
 msgid "Premium luxury car rental in Campania, Italy"
 msgstr "Noleggio di auto di lusso premium in Campania, Italia"
 
-#: templates/base.html:32 templates/service.html:7
-msgid "Rolls-Royce Ghost 6.6"
-msgstr ""
-
-#: templates/base.html:33 templates/service.html:11
+#: templates/base.html:34 templates/services.html:12
 msgid "Weddings"
 msgstr ""
 
-#: templates/base.html:34 templates/service.html:15
+#: templates/base.html:35 templates/services.html:17
 msgid "Private Parties"
 msgstr ""
 
@@ -58,7 +164,11 @@ msgstr ""
 msgid "Fill out the form below to book a luxury car."
 msgstr ""
 
-#: templates/book.html:8 templates/contact.html:4
+#: templates/book.html:25 templates/contact.html:21
+msgid "Your email"
+msgstr ""
+
+#: templates/contact.html:4
 #, fuzzy
 msgid "Contact Us"
 msgstr "Contatto"
@@ -68,12 +178,12 @@ msgstr "Contatto"
 msgid "Get in touch for luxury car rentals in Campania, Italy."
 msgstr "Noleggio di auto di lusso premium in Campania, Italia"
 
-#: templates/contact.html:7
-msgid "Email"
+#: templates/contact.html:19
+msgid "Your name"
 msgstr ""
 
-#: templates/contact.html:8
-msgid "Tel"
+#: templates/contact.html:23
+msgid "Your message"
 msgstr ""
 
 #: templates/index.html:5
@@ -83,23 +193,64 @@ msgstr ""
 #: templates/index.html:6
 #, fuzzy
 msgid "Experience premium luxury in Campania, Italy"
-msgstr "Noleggio di auto di lusso premium in Campania, Italia"
+msgstr "Esperienza di lusso premium in Campania, Italia"
 
-#: templates/service.html:4
+#: templates/index.html:12
+#, fuzzy
+msgid "Featured Luxury Cars"
+msgstr "Auto di Lusso"
+
+#: templates/index.html:17
+msgid "Premium luxury for any occasion."
+msgstr ""
+
+#: templates/services.html:4
 #, fuzzy
 msgid "Our Services"
 msgstr "I nostri servizi"
 
-#: templates/service.html:8
+#: templates/services.html:8
 msgid "Premium luxury driving experience with driver."
 msgstr ""
 
-#: templates/service.html:12
+#: templates/services.html:13
 msgid "Elegant transportation for your special day."
 msgstr ""
 
-#: templates/service.html:16
+#: templates/services.html:18
 msgid "Luxury rides for unforgettable events."
+msgstr ""
+
+#: templates/services.html:24
+msgid "Rolls-Royce in Naples"
+msgstr ""
+
+#: templates/services.html:25
+msgid "Luxury driving in Naples, Campania."
+msgstr ""
+
+#: templates/services.html:29
+msgid "Rolls-Royce in Salerno"
+msgstr ""
+
+#: templates/services.html:30
+msgid "Luxury driving in Salerno, Campania."
+msgstr ""
+
+#: templates/services.html:36
+msgid "Rolls-Royce in Avellino"
+msgstr ""
+
+#: templates/services.html:37
+msgid "Luxury driving in Avellino, Campania."
+msgstr ""
+
+#: templates/services.html:41
+msgid "Rolls-Royce in Benevento"
+msgstr ""
+
+#: templates/services.html:42
+msgid "Luxury driving in Benevento, Campania."
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/click/_termui_impl.py:556
@@ -397,6 +548,189 @@ msgid_plural "{len_type} values are required, but {len_value} were given."
 msgstr[0] ""
 msgstr[1] ""
 
+#: venv/lib/python3.11/site-packages/flask_wtf/file.py:55
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:293
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:323
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/flask_wtf/file.py:94
+#, python-brace-format
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/flask_wtf/file.py:101
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:146
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:152
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:164
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:595
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:631
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:700
+msgid "This field cannot be edited."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/validators.py:716
+msgid "This field is disabled and cannot have a value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/csrf/session.py:64
+msgid "CSRF token missing."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/csrf/session.py:72
+msgid "CSRF failed."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/csrf/session.py:77
+msgid "CSRF token expired."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:149
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:194
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/choices.py:212
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/datetime.py:52
+msgid "Not a valid datetime value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/datetime.py:78
+msgid "Not a valid date value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/datetime.py:104
+msgid "Not a valid time value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/datetime.py:149
+msgid "Not a valid week value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/numeric.py:82
+#: venv/lib/python3.11/site-packages/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr ""
+
+#: venv/lib/python3.11/site-packages/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr ""
+
 #~ msgid "Experience luxury in Campania, Italy"
+#~ msgstr ""
+
+#~ msgid "Rolls-Royce Ghost 6.6"
+#~ msgstr ""
+
+#~ msgid "Tel"
 #~ msgstr ""
 

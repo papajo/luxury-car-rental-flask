@@ -2,21 +2,30 @@
 {% block content %}
 <main class="container mx-auto py-16">
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">{{ _('Contact Us') }}</h1>
-    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
         <p class="text-gray-800">{{ _('Get in touch for luxury car rentals in Campania, Italy.') }}</p>
-        <p class="mt-4 text-gray-600"><strong>{{ _('Email') }}:</strong> info@luxurycars.com</p>
-        <p class="mt-2 text-gray-600"><strong>{{ _('Tel') }}:</strong> +39 123 456 789</p>
-        <!-- Optional: Add a simple contact form here -->
-        <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
-            <form action="/{{ lang }}/contact" method="post">
-                <label for="name" class="block text-gray-700">{{ _('Name') }}</label>
-                <input type="text" id="name" name="name" class="w-full p-2 mb-4 border rounded">
-                <label for="email" class="block text-gray-700">{{ _('Email') }}</label>
-                <input type="email" id="email" name="email" class="w-full p-2 mb-4 border rounded">
-                <label for="message" class="block text-gray-700">{{ _('Message') }}</label>
-                <textarea id="message" name="message" class="w-full p-2 mb-4 border rounded" rows="4"></textarea>
-                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">{{ _('Send') }}</button>
-            </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="mt-4 p-4 bg-{{ 'green' if category == 'success' else 'red' }}-100 text-{{ 'green' if category == 'success' else 'red' }}-800 rounded">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/{{ lang }}/contact" method="post">
+            {{ form.hidden_tag() }}
+            <label for="name" class="block text-gray-700 mt-4">{{ form.name.label }}</label>
+            {{ form.name(class="w-full p-2 mb-4 border rounded", placeholder=_('Your name')) }}
+            <label for="email" class="block text-gray-700">{{ form.email.label }}</label>
+            {{ form.email(class="w-full p-2 mb-4 border rounded", placeholder=_('Your email')) }}
+            <label for="message" class="block text-gray-700">{{ form.message.label }}</label>
+            {{ form.message(class="w-full p-2 mb-4 border rounded", rows="4", placeholder=_('Your message')) }}
+            {{ form.submit(class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700") }}
+        </form>
+        <!-- Optional Google Maps embed -->
+        <div class="mt-8">
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </main>
